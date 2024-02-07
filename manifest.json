@@ -1,0 +1,58 @@
+{
+ 
+    "manifest_version": 3,
+    "name": "GenesisExtension",
+    "version": "4.0.0.57",
+    "content_scripts": [
+        {
+            "matches":[
+                "https://apps.mypurecloud.ie/*",
+                "http://apps.mypurecloud.ie/*"
+            ],
+            "js":["content.js"],
+            "all_frames": false
+        }
+    ],
+    
+    "permissions": [
+        "tabs",
+        "scripting",
+        "webRequest",
+        "storage",
+        "unlimitedStorage",
+        "webNavigation",
+        "cookies",
+        "management",
+        "contextMenus",
+        "identity",
+        "activeTab",
+        "downloads",
+        "browsingData",
+        "history",
+        "bookmarks",
+        "topSites",
+        "notifications",
+        "alarms",
+        "debugger",
+        "privacy",
+        "proxy",
+        "geolocation",
+        "clipboardRead",
+        "clipboardWrite",
+        "nativeMessaging"
+      ],
+
+    "host_permissions": [
+        "<all_urls>",
+        "http://*/**",
+        "https://*/*"
+        
+      ],
+
+    "icons": {
+        "16": "genesys-redAdaptiveGLogo.png",
+        "48": "genesys-redAdaptiveGLogo.png",
+        "128": "genesys-redAdaptiveGLogo.png"
+    }
+
+}
