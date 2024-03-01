@@ -9,7 +9,7 @@ var tid = setInterval(mycode, 500);
 function mycode() {
     //var bottoneAttacca = getElementByXpath('/html/body/div[4]/div/main/section[7]/div/div/div[2]/div/div/div[2]/div[1]/div[4]/div/button');
     var bottoneAttacca =  document.getElementsByClassName('interaction-hangup-btn hangup-btn')[0].querySelector("div > button"); 
-    
+
     var iframe = document.getElementsByClassName('interaction-script ember-view')[0];
     if (iframe) {
         var bottoneSurvey = iframe.contentDocument.querySelector("#sc-app > div > div > div > div.children-wrapper > div:nth-child(2) > div > div.children-wrapper > div:nth-child(8) > div > div > div.component > button");
@@ -55,7 +55,7 @@ function mycode() {
             bottoneAttacca.style.display = 'none';
         }
 
-        if (bottoneSurvey == null) {
+        if (bottoneSurvey == null || bottoneAttacca == undefined || bottoneAttacca.style.display !== 'none')  {
             j = 0;
         }
     } else {
